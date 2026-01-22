@@ -1,0 +1,32 @@
+-- Dummy SQL Code for Data Pipeline
+
+-- 1. Create staging table
+CREATE TABLE staging_data (
+    id INT,
+    source_name VARCHAR(100),
+    load_date DATETIME,
+    record_count INT
+);
+
+-- 2. Insert sample data
+INSERT INTO staging_data (id, source_name, load_date, record_count)
+VALUES 
+    (1, 'source_a', GETDATE(), 1000),
+    (2, 'source_b', GETDATE(), 1500);
+
+-- 3. Create target table
+CREATE TABLE processed_data (
+    id INT PRIMARY KEY,
+    source_name VARCHAR(100),
+    processed_date DATETIME,
+    status VARCHAR(20)
+);
+
+-- 4. Transform and load data
+INSERT INTO processed_data (id, source_name, processed_date, status)
+SELECT id, source_name, GETDATE(), 'COMPLETED'
+FROM staging_data
+WHERE record_count > 0;
+
+-- 5. Cleanup staging table
+TRUNCATE TABLE staging_data;
