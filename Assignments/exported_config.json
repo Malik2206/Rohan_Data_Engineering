@@ -1,0 +1,53 @@
+{
+    "app_metadata": {
+        "application_name": "Sales Analytics Platform",
+        "environment": "production",
+        "version": "1.3.0",
+        "last_updated_by": "data_engineering_team"
+    },
+    "database": {
+        "db_type": "sqlite",
+        "db_name": "sales_analytics.db",
+        "backup_enabled": true,
+        "backup_schedule": "daily"
+    },
+    "connection": {
+        "host": "localhost",
+        "port": 5432,
+        "timeout_seconds": 30,
+        "retry_policy": {
+            "max_retries": 3,
+            "retry_interval_seconds": 5
+        }
+    },
+    "credentials": {
+        "username": "analytics_user",
+        "password": "encrypted_password_here"
+    },
+    "features": {
+        "logging": {
+            "enabled": true,
+            "log_level": "INFO",
+            "log_retention_days": 30
+        },
+        "caching": {
+            "enabled": true,
+            "cache_provider": "redis",
+            "ttl_seconds": 600
+        }
+    },
+    "data_sources": [
+        {
+            "source_name": "sales_orders",
+            "type": "csv",
+            "path": "/data/input/sales_orders.csv",
+            "refresh_frequency": "daily"
+        },
+        {
+            "source_name": "customer_master",
+            "type": "database",
+            "table_name": "customers",
+            "refresh_frequency": "hourly"
+        }
+    ]
+}

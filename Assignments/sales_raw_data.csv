@@ -1,0 +1,9 @@
+sale_id,sale_date,city,product,quantity,price
+1,2024-01-01,mumbai,Laptop,2.0,50000.0
+2,2024-01-02,Delhi,Mobile,1.0,20000.0
+3,2024-01-03,MUMBAI,Laptop,,50000.0
+4,2024-01-04,Bangalore,tablet,3.0,
+5,2024-01-05,delhi,Mobile,1.0,20000.0
+5,2024-01-05,delhi,Mobile,1.0,20000.0
+6,,Chennai,Laptop,2.0,52000.0
+7,2024-01-07,,Mobile,2.0,21000.0

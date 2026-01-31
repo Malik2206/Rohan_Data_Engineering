@@ -1,0 +1,11 @@
+﻿product_id,name,price,discounted_price
+1001,Mouse,5,0
+1002,Monitor,150,
+1003,Cable,3,
+1004,Keyboard,12,
+1005,Camera,15,
+1006,Router,30,
+1007,Motherboard,80,
+1008,RAM,40,
+1009,Graphics card,100,
+1010,CPU,50,
