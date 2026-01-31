@@ -1,0 +1,5 @@
+emp_id,name,salary,years_of_service,dept_id,dept_name
+1001,John Miller,65000.0,3.5,IT,Information Technology
+1005,Daniel Thompson,90000.0,4.8,IT,Information Technology
+1006,Olivia Brown,68000.0,3.0,IT,Information Technology
+1008,Sophia Martin,104500.00000000001,7.5,IT,Information Technology
